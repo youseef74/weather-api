@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather API</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg d-flex justify-content-center align-items-center justify-content-between">
+        <div class="container py-4">
+            <div class="d-flex gap-3">
+                <img src="images/logo@2x.png" alt="" class="logo">
+                <div class="logo-type">
+                    <h1 class="site-title">Weather</h1>
+                    <small class="site-description">tagline goes here</small>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-5">
+                    <li class="nav-item border border-2 border-info rounded-5">
+                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Live cameras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Photos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="hero">
+            <div class="container">
+                <div class="search mb-5 pt-5">
+                    <div class="contanier">
+                        <div class="position-relative d-flex justify-content-end">
+                            <input type="text" placeholder="  find your location..." id="searchLocation" class="searchBar form-control rounded-bottom-pill rounded-top-pill p-2 border-0">
+                            <button class="btn btn-info position-absolute rounded-bottom-pill rounded-top-pill py-1 px-4 m-1">Find</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards pb-5">
+                    <div class="row align-items-center">
+                        <!-- first day -->
+<div class="col-md-4">
+  <div class="card p-4 rounded-4 text-light mb-md-0 mb2 shadow">
+      <div class="card-header d-flex justify-content-between align-items-center mb-3">
+          <span id="todayWeekDayMarkup"></span>
+          <span id="dateToday"></span>
+      </div>
+      <div class="card-body">
+          <div>
+              <span id="cityToday"></span>
+          </div>
+          <div class="d-felx justify-content-between align-items-center">
+              <span class="temp display-1 d-block" id="tempToday"></span>
+              <img class="icon" id="imgToday" src="" alt="">
+          </div>
+          <div>
+              <span class="condition mt-2" id="todayCond">clear</span>
+          </div>
+          <div class="icons d-flex justify-content-between align-items-center mt-5">
+              <div>
+                  <img src="images/icon-umberella@2x.png" class="" alt="">
+                  <span id="humidityToday"></span> <!-- Update ID here -->
+              </div>
+              <div>
+                  <img src="images/icon-wind@2x.png" class="" alt="">
+                  <span id="windSpeedToday"></span> <!-- Update ID here -->
+              </div>
+              <div>
+                  <img src="images/icon-compass@2x.png" class="" alt="">
+                  <span id="windDirectionToday"></span> <!-- Added a unique ID here -->
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+ <!-- second day (tomorrow) -->
+<div class="col-md-4">
+  <div class="card card-line p-4 rounded-4 text-center text-light mb-md-0 mb2 shadow">
+      <div class="card-header text-center d-flex justify-content-between align-items-center mb-3">
+          <span id="tomorrowDay"></span>
+          <span id="dateTomorrow"></span> <!-- Corrected ID -->
+      </div>
+      <div class="card-body text-center">
+          <div class="d-felx justify-content-between align-items-center">
+              <img class="icon" id="iconTomorrow" src="" alt="">
+          </div>
+          <div>
+              <span class="condition mt-2" id="tomorrowCond">clear</span>
+          </div>
+          <div>
+              <span class="temp display-1  d-block" id="tMaxTemp"></span>
+              <span class="temp display-1  d-block" id="tMinTemp"></span>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- third day (day after tomorrow) -->
+<div class="col-md-4">
+  <div class="card card-line p-4 rounded-4 text-light mb-md-0 mb2 shadow">
+      <div class="card-header d-flex justify-content-between align-items-center mb-3">
+          <span id="aftertomorrowDay"></span>
+          <span id="dateAfterTomorrow"></span> <!-- Corrected ID -->
+      </div>
+      <div class="card-body text-center">
+          <div class="d-felx justify-content-between align-items-center">
+              <img class="icon" id="iconAfterTomorrow" src="" alt="">
+          </div>
+          <div>
+              <span class="condition mt-2" id="dayAfterTomorrowCond">clear</span>
+          </div>
+          <div>
+              <span class="temp display-1 d-block" id="daMaxTemp"></span>
+              <span class="temp display-1 d-block" id="daMinTemp"></span>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="site-footer pt-4 d-flex justify-content-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="subscribe-form d-flex gap-2 mb-5 d-flex justify-content-end">
+                            <input class="sub-input form-control rounded-5 position-relative" type="text" placeholder="Enter your email to subscribe...">
+                            <input class="sub-btn btn btn-info rounded-5 position-absolute" type="submit" value="Subscribe">
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-md-offset-1 ps-5">
+                        <div class="social-links">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+                            <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <p class="colophon">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

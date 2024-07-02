@@ -1,0 +1,102 @@
+.navbar{
+    background-color: #1E202B !important;
+    color: white !important;
+  }
+  .navbar-brand{
+    width: 0.8rem;
+    height: 2rem;
+  }
+  .logo-type{
+    font-size: 15px;
+    font-weight: 30;
+  }
+  .logo{
+    width: 64px;
+    height: 38px !important;
+  }
+  .site-title {
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-size: 1.1428571429em;
+    color: white;
+  }
+  .nav-item .nav-link{
+    color: #ffff;
+  }
+  .nav-item{
+    transition: all 0.2s;
+    padding: -2rem;
+  }
+  .nav-item:hover{
+      border-style: solid;
+      border-radius: 30px;
+      border-color:rgba(13, 202, 240);
+      padding: -3rem;
+      
+  }
+  .nav-link:hover{
+    color: rgba(13, 202, 240);
+  }
+  .hero{
+    width: 100%;
+    background-image: url(../images/hero.jpg);
+    background-position: center center;
+    background-size: cover;
+  position: relative;
+  }
+  .card{
+    background-color:#323544;
+    line-height:1.5rem;
+  }
+  .card-title{
+    background-color: #272a39;
+  }
+  .searchBar{
+    
+    color: white !important;
+  }
+  .searchBar::placeholder{
+color: rgba(192, 185, 185, 0.686);
+  }
+
+  footer{
+    background-color:#272a39;
+    height: 30vh;
+  }
+  .site-footer .social-links a{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 50%;
+    background: #1e202b;
+    color: #009ad8;
+    transition: all 0.3s;
+
+  }
+  .colophon{
+    color: rgba(255, 255, 255, 0.548);
+    
+  }
+  .site-footer .social-links a i{
+    margin: 0.6rem;
+    font-size: 1.3rem;
+  }
+
+  .site-footer .social-links a:hover{
+    background-color: #009AD8;
+    color: white;
+  }
+  .sub-input{
+    padding: 0.7rem;
+    
+    border: transparent;
+  }
+  .sub-btn{
+    margin-top: 0.3rem;
+    margin-right: 0.4rem;
+
+  }
+
+  .card-line{
+    line-height: 2rem;
+  }
